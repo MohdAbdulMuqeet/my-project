@@ -65,51 +65,50 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="min-h-screen mt-20 mb-6">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-12 drop-shadow-lg">
-          Frequently Asked Questions (FAQs)
-        </h1>
-        <div className="bg-black/70 rounded-2xl shadow-2xl mt-12 overflow-hidden w-full p-6">
-          {faqData.map((faq, index) => (
-            <div
-              key={index}
-              className="border-b last:border-b-0 border-gray-700"
-            >
-              <button
-                onClick={() => toggleFaq(index)}
-                className="w-full px-10 py-8 text-left flex items-center justify-between transition-all duration-300"
-              >
-                <span className="text-xl md:text-2xl font-semibold text-white pr-4 leading-relaxed">
-                  {faq.question}
-                </span>
-                <div
-                  className={`flex-shrink-0 transition-transform duration-300 ${
-                    openIndexes.includes(index) ? "rotate-180" : ""
-                  }`}
-                >
-                  <ChevronDown className="w-7 h-7 text-gray-200" />
-                </div>
-              </button>
+   <div className="min-h-screen mt-20 mb-6 px-4 sm:px-6 md:px-10">
+  <div className="max-w-7xl mx-auto">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-8 sm:mb-12 drop-shadow-lg">
+      Frequently Asked Questions (FAQs)
+    </h1>
 
-              <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  openIndexes.includes(index)
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="px-10 py-6">
-                  <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
+    <div className="bg-black/70 rounded-2xl shadow-2xl overflow-hidden w-full p-4 sm:p-6 md:p-6">
+      {faqData.map((faq, index) => (
+        <div key={index} className="border-b last:border-b-0 border-gray-700">
+          <button
+            onClick={() => toggleFaq(index)}
+            className="w-full px-4 sm:px-6 md:px-10 py-4 sm:py-6 flex items-center justify-between text-left transition-all duration-300"
+          >
+            <span className="text-lg sm:text-xl md:text-2xl font-semibold text-white pr-4 leading-relaxed">
+              {faq.question}
+            </span>
+            <div
+              className={`flex-shrink-0 transition-transform duration-300 ${
+                openIndexes.includes(index) ? "rotate-180" : ""
+              }`}
+            >
+              <ChevronDown className="w-6 sm:w-7 h-6 sm:h-7 text-gray-200" />
             </div>
-          ))}
+          </button>
+
+          <div
+            className={`overflow-hidden transition-all duration-500 ease-in-out ${
+              openIndexes.includes(index)
+                ? "max-h-96 opacity-100"
+                : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="px-4 sm:px-6 md:px-10 py-3 sm:py-6">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      ))}
     </div>
+  </div>
+</div>
+
   );
 };
 

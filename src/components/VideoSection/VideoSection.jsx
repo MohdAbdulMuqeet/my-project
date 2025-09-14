@@ -3,7 +3,7 @@
 import React from "react";
 import AnimatedButton from "../ui/AnimatedButton"; // import your existing button component
 
-const AiFiestaVideoSection = () => {
+const VideoSection = () => {
   return (
     <div className="min-h-screen text-white relative overflow-hidden mt-20 mb-14">
       {/* Background stars/particles effect */}
@@ -132,4 +132,4 @@ const AiFiestaVideoSection = () => {
   );
 };
 
-export default AiFiestaVideoSection;
+export default VideoSection;

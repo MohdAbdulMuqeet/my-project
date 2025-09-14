@@ -6,7 +6,7 @@ const GridBackground = ({
   className = "",
   gridSize = 80,
   strokeWidth = 1,
-  opacity = 0.1,
+  opacity = 0.05,
   color = "#ffffff"
 }) => {
   return (

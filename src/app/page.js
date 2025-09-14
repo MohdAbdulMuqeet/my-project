@@ -1,11 +1,11 @@
 import Header from "@/components/Header/Header";
 import Herosection from "@/components/Herosection/Herosection";
 import ScrollingFeatureCards from "@/components/ScrollingFeatureCards/ScrollingFeatureCards";
-import AiComparrision from "@/components/AiComparrision/AiComparrision";
-import AIModelsHubShowcase from "@/components/AIModelsHubShowcase/AIModelsHubShowcase";
-import AiFiestaVideoSection from "@/components/AiFiestaVideoSection/AiFiestaVideoSection";
+import PricingSection from "@/components/PricingSection/PricingSection";
+import SixCardSection from "@/components/CardSection/SixCardSection";
 import FAQSection from "@/components/FAQSection/FAQSection";
 import Footer from "@/components/Footer/Footer";
+import VideoSection from "@/components/VideoSection/VideoSection";
 export default function Home() {
   return (
     <div>
@@ -14,9 +14,9 @@ export default function Home() {
       <main>
         <Herosection/>
         <ScrollingFeatureCards/>
-        <AiComparrision/>
-        <AIModelsHubShowcase/>
-        <AiFiestaVideoSection/>
+        <PricingSection/>
+        <SixCardSection/>
+        <VideoSection/>
         <FAQSection/>
         <Footer/>
       </main>
