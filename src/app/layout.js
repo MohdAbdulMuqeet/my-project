@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import StarBackground from "@/components/Background/StarBackground"; 
+import GridBackground from "@/components/Background/GridBackground"; // import grid background
+import GreenBackgroundGlow from "@/components/Background/GreenBackgroundGlow"; // import green gradient background
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,9 +23,24 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        {children}
+        {/* Fixed Star Background */}
+        <StarBackground />
+
+        {/* Fixed Grid Background */}
+        <GridBackground 
+          gridSize={110} 
+          strokeWidth={1} 
+          opacity={0.1} 
+          color="#ffffff" 
+        />
+
+        {/* Green Radial Gradient Background */}
+        <GreenBackgroundGlow />
+
+        {/* Your page content */}
+        <main className="relative z-10">{children}</main>
       </body>
     </html>
   );
